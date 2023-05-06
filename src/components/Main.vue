@@ -35,7 +35,7 @@ export default {
 @use '../scss/main.scss' as *;
 
 main {
-    margin: 40px 0;
+    margin-top: 40px;
     .main-wrapper {
         display: flex;
         flex-direction: column;
@@ -67,6 +67,11 @@ main {
                 text-transform: uppercase;
                 cursor: pointer;
                 font-weight: $bold;
+                transition: all .5s;
+                &:hover {
+                    transform: scale(1.3);
+                    border-radius: 5px;
+                }
             }
         }
     }
