@@ -8,7 +8,7 @@ export default {
     <header>
         <div class="header-wrapper">
             <div class="logo-container">
-                <img src="../assets/img/dc-logo.png" alt="">
+                <img src="../assets/img/dc-logo.png" alt="dc-logo">
             </div>
             <div class="nav-container">
                 <nav>
@@ -25,12 +25,11 @@ export default {
 
 <style lang="scss" scoped>
 @use '../scss/main.scss' as *;
-// @use '../scss/partials/variables' as *;
 
 header {
     display: flex;
     justify-content: center;
-    height: 120px;
+    height: 100px;
     width: 100%;
     background-color: $light;
     margin-top: 20px;
