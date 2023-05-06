@@ -1,6 +1,10 @@
 <script>
+import Card from './partials/Card.vue'
 export default {
     name: 'Main',
+    components: {
+        Card,
+    }
 }
 </script>
 
@@ -10,39 +14,7 @@ export default {
             <div class="container">
                 <h4>Current Series</h4>
                 <div class="cards-container">
-
-                    <div class="card">
-    
-                    </div>
-                    
-                    <div class="card">
-    
-                    </div>
-                    
-                    <div class="card">
-    
-                    </div>
-                    
-                    <div class="card">
-    
-                    </div>
-                    
-                    <div class="card">
-    
-                    </div>
-                    
-                    <div class="card">
-    
-                    </div>
-                    
-                    <div class="card">
-    
-                    </div>
-                    
-                    <div class="card">
-    
-                    </div>
-                    
+                    <Card />
                 </div>
                 <button>Load More</button>
             </div>
@@ -67,14 +39,14 @@ main {
             display: flex;
             flex-wrap: wrap;
             width: 100%;
-            .card {
-                width: calc(100% / 6 - 20px);
-                padding: 0 10px;
-                margin: 10px;
-                //debug
-                border: 1px solid $primary;
-                height: 100px;
-            }
+            // .card {
+            //     width: calc(100% / 6 - 20px);
+            //     padding: 0 10px;
+            //     margin: 10px;
+            //     //debug
+            //     border: 1px solid $primary;
+            //     height: 100px;
+            // }
         }
         button {
             padding: 10px 35px;
