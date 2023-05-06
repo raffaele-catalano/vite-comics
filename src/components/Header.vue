@@ -32,7 +32,6 @@ header {
     height: 100px;
     width: 100%;
     background-color: $light;
-    margin-top: 20px;
     .header-wrapper {
         display: flex;
         justify-content: space-between;
