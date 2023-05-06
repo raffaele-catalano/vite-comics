@@ -1,9 +1,17 @@
 <script>
 import Card from './partials/Card.vue'
+import CTA from './partials/CTA.vue'
+import ComicsJson from '../data/dc-comics.json'
 export default {
     name: 'Main',
     components: {
         Card,
+        CTA
+    },
+    data () {
+        return {
+            ComicsJson,
+        }
     }
 }
 </script>
@@ -14,9 +22,10 @@ export default {
             <div class="container">
                 <h4>Current Series</h4>
                 <div class="cards-container">
-                    <Card />
+                    <Card v-for="(comic, index) in ComicsJson" :key="index" :Thumb="comic.thumb" :Series="comic.series"/>
                 </div>
                 <button>Load More</button>
+                <CTA />
             </div>
         </div>
     </main>
@@ -26,36 +35,39 @@ export default {
 @use '../scss/main.scss' as *;
 
 main {
+    margin: 40px 20px;
     .main-wrapper {
         display: flex;
         flex-direction: column;
         position: relative;
         margin: 0 auto;
-        width: 90%;
+        width: 80%;
         text-align: center;
-        // debug
-        color: white;
-        .cards-container{
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            // .card {
-            //     width: calc(100% / 6 - 20px);
-            //     padding: 0 10px;
-            //     margin: 10px;
-            //     //debug
-            //     border: 1px solid $primary;
-            //     height: 100px;
-            // }
-        }
-        button {
-            padding: 10px 35px;
-            background-color: $primary;
-            border: none;
-            color: $light;
-            text-transform: uppercase;
-            font-weight: $bold;
-            cursor: pointer;
+        .container {
+            h4 {
+                background-color: $primary;
+                max-width: 200px;
+                color: $light;
+                text-transform: uppercase;
+                padding: 15px;
+                position: absolute;
+                top: -70px;
+            }
+            .cards-container{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-bottom: 25px;
+            }
+            button {
+                padding: 10px 35px;
+                background-color: $primary;
+                border: none;
+                color: $light;
+                text-transform: uppercase;
+                cursor: pointer;
+                font-weight: $bold;
+            }
         }
     }
 }
