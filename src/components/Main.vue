@@ -25,9 +25,9 @@ export default {
                     <Card v-for="(comic, index) in ComicsJson" :key="index" :Thumb="comic.thumb" :Series="comic.series"/>
                 </div>
                 <button>Load More</button>
-                <CTA />
             </div>
         </div>
+        <CTA />
     </main>
 </template>
 
@@ -35,7 +35,7 @@ export default {
 @use '../scss/main.scss' as *;
 
 main {
-    margin: 40px 20px;
+    margin: 40px 0;
     .main-wrapper {
         display: flex;
         flex-direction: column;
