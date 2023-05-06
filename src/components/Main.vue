@@ -22,7 +22,7 @@ export default {
             <div class="container">
                 <h4>Current Series</h4>
                 <div class="cards-container">
-                    <Card v-for="(comic, index) in ComicsJson" :key="index" :Thumb="comic.thumb" :Series="comic.series"/>
+                    <Card v-for="(comic, index) in ComicsJson" :key="index" :Thumb="comic.thumb" :Series="comic.series" :Type="comic.type" :Price="comic.price"/>
                 </div>
                 <button>Load More</button>
             </div>

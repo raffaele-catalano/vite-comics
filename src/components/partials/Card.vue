@@ -4,6 +4,8 @@ export default {
     props: {
         Thumb   : String,
         Series  : String,
+        Type    : String,
+        Price   : Number
     }
 }
 </script>
@@ -20,6 +22,11 @@ export default {
             <span>{{Series}}</span>
         </div>
 
+        <div class="other-info-container">
+            <h5>{{ Type }}</h5>
+            <h5>${{ Price }}</h5>
+        </div>
+
     </div>
 
 </template>
@@ -30,6 +37,11 @@ export default {
     width: calc(100% / 6 - 20px);
     padding: 0 10px;
     margin: 15px 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
     .image-container {
         width: 100%;
         aspect-ratio: 2/3;
@@ -48,6 +60,19 @@ export default {
             text-transform: uppercase;
             font-weight: $light-bold;
             color: $light;
+        }
+    }
+    
+    .other-info-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $light;
+        
+        h5{
+            &:first-child{
+                text-transform: capitalize;
+            }
         }
     }
 }
