@@ -1,6 +1,12 @@
 <script>
+import { menuHeader } from '../data/db-menu';
 export default {
     name: 'Header',
+    data() {
+        return {
+            menuHeader
+        }
+    }
 }
 </script>
 
@@ -13,8 +19,8 @@ export default {
             <div class="nav-container">
                 <nav>
                     <ul>
-                        <li>
-                            <a href="#">Prova</a>
+                        <li v-for="(item, index) in menuHeader" :key="index">
+                            <a :href="item.href">{{ item.label }}</a>
                         </li>
                     </ul>
                 </nav>
@@ -51,10 +57,15 @@ header {
                         display: inline-block;
                         a {
                             color: $gray;
-                            margin: 0 10px;
+                            margin: 0 15px;
                             text-transform: uppercase;
                             font-size: $s-txt;
                             font-weight: $bold;
+                            transition: all .3s;
+                        }
+                        a:hover {
+                            color: $primary;
+                            font-size: .9rem;
                         }
                     }
                 }
