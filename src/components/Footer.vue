@@ -1,6 +1,10 @@
 <script>
+import Social from './partials/Social.vue'
 export default {
     name: 'Footer',
+    components: {
+        Social,
+    }
 }
 </script>
 
@@ -74,6 +78,7 @@ export default {
 
         </div>
     </footer>
+    <Social />
 </template>
 
 <style lang="scss" scoped>
@@ -134,8 +139,9 @@ footer {
 
             img {
                 position: absolute;
-                right: 80px;
-                transform: scale(1.2);
+                right: 100px;
+                bottom: -80px;
+                // transform: scale(1.1);
             }
         }
     }
