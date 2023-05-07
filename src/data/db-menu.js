@@ -38,7 +38,7 @@ const menuHeader = [
     {
         label   : 'shop',
         href    : '#'
-    },
+    }
 ]
 
 const menuCTA = [
@@ -61,9 +61,37 @@ const menuCTA = [
     {
         label   : 'dc power visa',
         src     : './src/assets/img/buy-dc-power-visa.svg'
+    }
+]
+
+const menuSocial = [
+    {
+        href    : '#',
+        src     : "./src/assets/img/footer-facebook.png",
+        label   : 'facebook'
     },
+    {
+        href    : '#',
+        src     : "./src/assets/img/footer-twitter.png",
+        label   : 'twitter'
+    },
+    {
+        href    : '#',
+        src     : "./src/assets/img/footer-youtube.png",
+        label   : 'youtube'
+    },
+    {
+        href    : '#',
+        src     : "./src/assets/img/footer-pinterest.png",
+        label   : 'pinterest'
+    },
+    {
+        href    : '#',
+        src     : "./src/assets/img/footer-periscope.png",
+        label   : 'periscope'
+    }
 ]
 
 
 
-export {menuHeader, menuCTA}
+export {menuHeader, menuCTA, menuSocial}
